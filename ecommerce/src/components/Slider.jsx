@@ -3,6 +3,7 @@ import styled from 'styled-components'
 import ArrowBackIosNewOutlinedIcon from '@mui/icons-material/ArrowBackIosNewOutlined';
 import ArrowForwardIosOutlinedIcon from '@mui/icons-material/ArrowForwardIosOutlined';
 import { useState } from 'react';
+import {sliderItems} from '../data'
 
 
 
@@ -106,43 +107,26 @@ const Slider = () => {
         <ArrowBackIosNewOutlinedIcon/>
         </Arrow>
         <Wrapper>
-         
-         <Slide bg="f5fafd" >
+         {sliderItems.map((item) =>(
+
+
+         <Slide bg={item.bg} >
 
           <ImgContainer>
-            <Image src=""/>
+            <Image src={item.img}/>
           </ImgContainer>
-           <InfoContainer>
-            <Title>SUMMER SALE</Title>
-            <Desc>DON'T COMPROMİSE ON STYLE! GET FLAT 30% OFF NEW ARRIVALS</Desc>
+           <InfoContainer >
+            <Title>{item.title}</Title>
+            <Desc>{item.desc}</Desc>
             <Button>SHOW NOW</Button>
            </InfoContainer>
          
          </Slide>
-         <Slide bg="fcf1ed">
 
-          <ImgContainer>
-            <Image src=""/>
-          </ImgContainer>
-           <InfoContainer>
-            <Title>WINTER SALE</Title>
-            <Desc>DON'T COMPROMİSE ON STYLE! GET FLAT 30% OFF NEW ARRIVALS</Desc>
-            <Button>SHOW NOW</Button>
-           </InfoContainer>
-         
-         </Slide>
-         <Slide bg="fbf0f4">
 
-          <ImgContainer>
-            <Image src=""/>
-          </ImgContainer>
-           <InfoContainer>
-            <Title>POPULAR SALE</Title>
-            <Desc>DON'T COMPROMİSE ON STYLE! GET FLAT 30% OFF NEW ARRIVALS</Desc>
-            <Button>SHOW NOW</Button>
-           </InfoContainer>
+         ))}
          
-         </Slide>
+         
 
 
         </Wrapper>
