@@ -1,7 +1,7 @@
 export const sliderItems = [
     {
       id: 1,
-      img: "https://media.istockphoto.com/id/1327495437/tr/foto%C4%9Fraf/excited-woman-wearing-rainbow-cardigan.jpg?s=612x612&w=0&k=20&c=PQuVRVG6wh_IXdOJPYbmt-PkvOVJfNsP5WejIn6isy0=",
+      img: "https://thumbs.dreamstime.com/b/portrait-beautiful-girl-model-casual-summer-clothes-no-makeup-white-background-beautiful-girl-model-casual-summer-100630200.jpg",
       title: "SUMMER SALE",
       desc: "DON'T COMPROMISE ON STYLE! GET FLAT 30% OFF FOR NEW ARRIVALS.",
       bg: "f5fafd",

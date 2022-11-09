@@ -33,7 +33,7 @@ const Arrow = styled.div`
   margin: auto;
   cursor: pointer;
   opacity:0.5;
-  z-index: :2;
+  z-index:2;
 `
 
 
