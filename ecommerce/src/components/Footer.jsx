@@ -4,6 +4,9 @@ import FacebookIcon from '@mui/icons-material/Facebook';
 import InstagramIcon from '@mui/icons-material/Instagram';
 import TwitterIcon from '@mui/icons-material/Twitter';
 import PinterestIcon from '@mui/icons-material/Pinterest';
+import LocationOnIcon from '@mui/icons-material/LocationOn';
+import PhoneIcon from '@mui/icons-material/Phone';
+import EmailIcon from '@mui/icons-material/Email';
 
 
 const Container = styled.div`
@@ -62,16 +65,32 @@ const List = styled.ul`
     margin:0;
     padding: 0;
     list-style: none;
+    display: flex;
+    flex-wrap: wrap;
 `
 
 
-const ListItem = styled.li``
+const ListItem = styled.li`
+    width: 50%;
+    margin-bottom: 10px;
+`
     
 
 
 const Right = styled.div`
    flex:1;
    padding: 20px;
+`
+
+const ContactItem = styled.div`
+   margin-bottom: 20px;
+   display: flex;
+   align-items: center;
+`
+
+
+const Payment = styled.img`
+   width: 50%;
 `
 
 
@@ -114,7 +133,19 @@ const Footer = () => {
             
         </List>
       </Center>
-      <Right></Right>
+      <Right>
+        <Title>Contact</Title>
+        <ContactItem>
+          <LocationOnIcon style={{marginRight:"10px"}}/>  555 SouthPark Family Guy street
+        </ContactItem>
+        <ContactItem>
+          <PhoneIcon  style={{marginRight:"10px"}}/> +1 568 79 457
+        </ContactItem>
+        <ContactItem>
+          <EmailIcon  style={{marginRight:"10px"}}/> contact@example.com
+        </ContactItem>
+        <Payment src="https://i.ibb.co/Qfvn4z6/payment.png"/>
+      </Right>
     </Container>
   )
 }
