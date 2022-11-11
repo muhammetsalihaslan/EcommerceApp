@@ -108,9 +108,6 @@ const AmountContainer = styled.div`
 `
 
 
-const Remove = styled.div``
-
-
 
 const Amount = styled.span`
    width: 30px;
@@ -124,7 +121,7 @@ const Amount = styled.span`
 `
 
 
-const Add = styled.div``
+
 
 
 const Button = styled.button`
@@ -132,13 +129,12 @@ const Button = styled.button`
    border: 2px solid teal;
    background-color:white;
    cursor: pointer;
+   font-weight: 500;
+
+   &:hover{
+    background-color:#f8f4f4;
+   }
 `
-
-
-
-
-    
-
 
 
 
@@ -150,12 +146,12 @@ const Product = () => {
         <Announcement/>
         <Wrapper>
             <ImgContainer>
-            <Image/>
+            <Image src="https://d3o2e4jr3mxnm3.cloudfront.net/Mens-Summer-Gold-Short-Sleeve-CrusherLITE-Tee_98105_1_lg.png"/>
             </ImgContainer>
             <InfoContainer>
-                <Title></Title>
-                <Desc></Desc>
-                <Price></Price>
+                <Title>MEN'S SUMMER GOLD SHORT SLEEVE TEE</Title>
+                <Desc>Soft, comfy, and made to last. Our Crusher Tees are made for all-day comfort with a feels-like-you-had-it forever fit. Choose between our original heavyweig</Desc>
+                <Price>29.5$</Price>
             <FilterContainer>
                 <Filter>
                     <FilterTitle>Color</FilterTitle>
