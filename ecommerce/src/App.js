@@ -1,7 +1,9 @@
 // import Home from "./pages/Home";
 // import ProductList from "./pages/ProductList";
 
-import Register from "./pages/Register";
+import Login from "./pages/Login";
+
+// import Register from "./pages/Register";
 
 // import Product from "./pages/Product";
 
@@ -11,7 +13,8 @@ const  App = () =>  {
     <div >
       {/* <ProductList/> */}
       {/* <Product/> */}
-      <Register/>
+      {/* <Register/> */}
+      <Login/>
     </div>
   );
 }
