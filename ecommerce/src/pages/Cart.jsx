@@ -60,8 +60,33 @@ const Info = styled.div`
 
 const Summary = styled.div`
    flex:1;
-   
 `
+
+const Product = styled.div``
+
+
+const ProductDetail = styled.div``
+    
+
+const Image = styled.img``
+
+
+const Details = styled.div``
+
+
+const ProductName = styled.span``
+
+
+const ProductId = styled.span``
+
+
+const ProductColor = styled.span``
+
+
+const ProductSize = styled.span``
+
+
+const PriceDetail = styled.div``
 
 
 
@@ -84,7 +109,20 @@ const Cart = () => {
             </Top>
             <Bottom>
               <Info>
-                
+                <Product>
+                    <ProductDetail>
+                       <Image src="https://t2g3y2z7.rocketcdn.me/wp-content/uploads/2019/06/4-1.jpg"/>
+                       <Details>
+                         <ProductName> <b>Product:</b>  Bohemian Beach Dress</ProductName>
+                         <ProductId> <b>ID:</b>  80080090060</ProductId>
+                         <ProductColor/>
+                        <ProductSize> <b>Size:</b> 38 </ProductSize>
+                       </Details>
+                    </ProductDetail>
+                    <PriceDetail>
+                       price
+                    </PriceDetail>
+                </Product>
               </Info>  
               <Summary>summary</Summary>
             </Bottom>
