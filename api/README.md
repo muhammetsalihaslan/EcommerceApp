@@ -58,6 +58,44 @@ async/await/trycatch is much important to build structure of rest api
 
 İ am using cors so what is cors::Cross-Origin Resource Sharing (CORS) is an HTTP-header based mechanism that allows a server to indicate any origins (domain, scheme, or port) other than its own from which a browser should permit loading resources. CORS also relies on a mechanism by which browsers make a "preflight" request to the server hosting the cross-origin resource, in order to check that the server will permit the actual request. In that preflight, the browser sends headers that indicate the HTTP method and headers that will be used in the actual request.
 
+if we want to more than one type we shuold use Array
+
+ALL PROCESS
+
+we have to install npm dependencies
+ code: npm init -y
+ 
+install all library which is we need
+ code: yarn add express mongoose dotenv nodemon 
+
+ express: Express is a node js web application framework that provides broad features for building web and mobile applications. It is used to build a single page, multipage, and hybrid web application. It's a layer built on the top of the Node js that helps manage servers and routes
+
+ mongoose:Mongoose is an Object Data Modeling (ODM) library for MongoDB and Node.js. It manages relationships between data, provides schema validation, and is used to translate between objects in code and the representation of those objects in MongoDB.
+
+ dotenv:DotEnv is a lightweight npm package that automatically loads environment variables from a .env file into the process.env object
+   To use DotEnv, first install it using the command: npm i dotenv. Then in your app, require and configure the package like this: require('dotenv').config().
+
+nodemon:Nodemon will monitor for any changes in your source and automatically restart your server. Perfect for development.
+
+
+how am i work my application for inside of index in node.js
+
+code: node index.js
+
+**in order not to write node index.js repeatedly "nodemon index.js" should writen inte start part of the scripts section in package.json. after that only thing we  should write "yarn start" for only one time and after all rewirite our application otomatically update itself
+
+//CREATE EXPRESS SERVER
+
+
+
+
+
+
+
+
+
+
+
 
 
 
