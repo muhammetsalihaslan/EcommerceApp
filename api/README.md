@@ -60,7 +60,7 @@ async/await/trycatch is much important to build structure of rest api
 
 if we want to more than one type we shuold use Array
 
-ALL PROCESS
+///*********ALL PROCESS*********///
 
 we have to install npm dependencies
  code: npm init -y
@@ -85,6 +85,18 @@ code: node index.js
 **in order not to write node index.js repeatedly "nodemon index.js" should writen inte start part of the scripts section in package.json. after that only thing we  should write "yarn start" for only one time and after all rewirite our application otomatically update itself
 
 //CREATE EXPRESS SERVER
+
+firstly import an express library 
+  code: const express = require('express');
+secondly use express function 
+  code: const app = express();
+to run this application:
+  code: app.listen(5000, () =>{
+       console.log("Backend server is running")
+  });  (optional: 5000 / Backend server is running)
+
+
+//HOW WE CAN CONNECT OUR MONGO SERVER 
 
 
 
