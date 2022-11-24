@@ -98,6 +98,43 @@ to run this application:
 
 //HOW WE CAN CONNECT OUR MONGO SERVER 
 
+import our library
+  const mongoose = require("mongoose")
+how we gonna use this library 
+   mongoose.connect("here we paste our mongo  connect side ").then(() => console.log("DB connection is succesful")).catch((err) => {console.log(err)}); // then catch part is a kind of control part to see if there is a connection or not.
+
+
+//DOTENV
+
+import 
+  const dotenv = require('dotenv');
+use 
+  dotenv.config();
+
+//CREATE ROUTES 
+
+firstly import express routers
+   const router = require("express").Router();
+
+
+(req ,res) => req come from client side res come from server side
+
+export router user
+   module.export = router
+
+to use this routes we should import in index.js 
+  const userRoute = require('./routes/user')
+
+use imported routes in index.js
+  app.use("/api/users", userRoute);
+
+
+req.body.password => this body is what we are passing to server if there is password we use this code
+
+ 
+
+
+
 
 
 
