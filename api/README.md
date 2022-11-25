@@ -113,6 +113,9 @@ use
 
 //CREATE ROUTES 
 
+All routes have to take import express and export itself
+
+
 firstly import express routers
    const router = require("express").Router();
 
@@ -130,6 +133,51 @@ use imported routes in index.js
 
 
 req.body.password => this body is what we are passing to server if there is password we use this code
+
+
+we use postman to test the user side 
+
+to usable json we nned to write code in index.js
+  app.use(express.json()); 
+
+
+inside our aplication with - models -  we use mongo db to application dynamic 
+
+//MODELS
+
+import mongoose 
+create schema 
+export schema 
+
+{ timestamps:true}// that tells Mongoose to automatically manage createdAt and updatedAt properties on your documents. create and uptade is about timing  
+
+
+//WHY ARE WE CREATE AUTH ROUTES 
+
+Because we want to more secure and best practise we have to create auth for login and register intead of  inside of user.js 
+
+
+register and login => POST method 
+
+//REGİSTER
+
+use post method 
+
+models part related models is USER schema 
+
+use save() method for save user
+
+use async function to save new user to say if there is a new user save and if taje a any error get an error 
+  
+   res.status(201).json(savedUser); succesful respond  client  will see 
+
+   res.status(500).json(err) error respond  client side will see
+
+we have to import and use in index.js for the auth working 
+
+
+
+
 
  
 
