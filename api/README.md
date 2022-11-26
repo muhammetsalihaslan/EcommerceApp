@@ -159,7 +159,7 @@ Because we want to more secure and best practise we have to create auth for logi
 
 register and login => POST method 
 
-//REGİSTER
+           ********REGİSTER*********
 
 use post method 
 
@@ -173,7 +173,45 @@ use async function to save new user to say if there is a new user save and if ta
 
    res.status(500).json(err) error respond  client side will see
 
-we have to import and use in index.js for the auth working 
+*****************************
+
+//we have to import and use in index.js for the auth working 
+
+import side
+ const authRoute = require('./routes/auth');
+
+use side 
+  app.use("/api/auth", authRoute) ;  this is our url how it gonna write 
+
+
+***************************
+
+              *******CRYPTOJS**********
+
+// we have never ever show our password in mongo db side we have to cover with  cryptojs   https://cryptojs.gitbook.io/docs/  we use Ciphers part and AES 
+
+how we add cryptojs to our project 
+  
+  code: yarn add crypto-js 
+
+import cryptojs
+ 
+  const CryptoJS = require("crypto-js");
+
+use cryptojs
+  
+   pasword side req.body.password and with interested part in .env
+
+CryptoJS.AES.encrypt("Message", "Secret Passphrase"); REGİSTER PART USE
+
+CryptoJS.AES.decrypt(encrypted, "Secret Passphrase"); LOGİN PART USE
+
+
+             *******LOGIN*************
+
+We find to user which is create in register part and we use findOne() method for user
+
+
 
 
 
