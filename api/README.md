@@ -226,6 +226,45 @@ _doc = our mongo db store our document in _doc side so we need to use user._doc
 const { password, ...others} = user._doc;  its a spread operator we say remove the password inside the others
 
 
+                 ********JASON WEB TOKEN*************
+
+
+JSON Web Token (JWT) is an open standard (RFC 7519) that defines a compact and self-contained way for securely transmitting information between parties as a JSON object. This information can be verified and trusted because it is digitally signed. JWTs can be signed using a secret (with the HMAC algorithm) or a public/private key pair using RSA or ECDSA.
+
+add our project 
+  code: yarn add jsonwebtoken
+import 
+  const jwt = require('jsonwebtoken0');
+
+isAdmin ::  means if isadmin is true admin user can create delete etc.. things whatever admin want
+
+use:
+ 
+const accessToken = jwt.sign({ 
+              id:user._id,   //equal to user id
+              isAdmin:user.isAdmin,  //equal to user isAdmin 
+           }, 
+           process.env.JWT_SEC,
+           { expiresIn:"365d"}
+           );
+
+{ expiresIn:"365d"} it must be "d" timeline  so day 
+
+ res.status(200).json({...others, accessToken}); :: We used the spread operator because we wanted to get rid of the others.
+
+
+******************************
+
+ auth is register and login part 
+
+ user.js is uptade get delete gel all user side 
+
+
+******************************
+
+
+                 *********user.js part**********
+
 
 
 
