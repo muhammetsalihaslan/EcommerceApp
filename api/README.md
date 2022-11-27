@@ -206,10 +206,25 @@ CryptoJS.AES.encrypt("Message", "Secret Passphrase"); REGİSTER PART USE
 
 CryptoJS.AES.decrypt(encrypted, "Secret Passphrase"); LOGİN PART USE
 
+toString() code is only way to save our password in mongo db 
+
 
              *******LOGIN*************
 
-We find to user which is create in register part and we use findOne() method for user
+We find to user which is create in register part and we use findOne() method for user which is mongodb method
+
+The findOne() method finds and returns one document that matches the given selection criteria. If multiple documents satisfy the given query expression, then this method will return the first document according to the natural order which reflects the order of documents on the disk.
+
+!user && res.status(401).json("Wrong credentials!") if user not right take - wrong credential - error
+
+toString(CryptoJS.enc.Utf8); to use another caracter we need to use inside of parantheses of tostring
+
+we dont want to show our password anywhere so we need to use spread operator to choose what we want to show in our postman and other areas
+
+_doc = our mongo db store our document in _doc side so we need to use user._doc
+
+const { password, ...others} = user._doc;  its a spread operator we say remove the password inside the others
+
 
 
 
