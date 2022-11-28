@@ -293,7 +293,35 @@ Because it's in the relevant standards documents. The general scheme is that you
 
 when we use Bearer we should use split first in verifyToken side
   
-   code:const token = authHeader.split(" ")[1]; split and use token 
+   code:const token = authHeader.split(" ")[1]; split and use token for token usage in  postman 
+
+in this part user can update but order and product part only admin can update  in this we use verifytokenandadmin
+
+
+//DELETE////////////////////////////////
+
+use verifytokenandauthorization for admin and other can delete 
+
+using mongo db findByIdAndDelete method for 
+
+req.params.id == its a id way to delete our what we want 
+
+
+//GET METHOD////////////////////////////////
+
+Use get method and verifytokenandadmin for only admin can get 
+we gonna use findbyid method for mongo db 
+we find other 
+
+for get user 
+
+we should create new register and change isadmin to true in mongobd and we have to login with new register in postman and than we get user with this new login's token 
+
+in this tutorial most important part is take a true token and verify dont forget 
+
+
+
+
 
 
 
@@ -315,7 +343,16 @@ next() ::The next function is a function in the Express router which, when invok
 
   if(req.user.id === req.params.id || req.user.isAdmin) :: if an id equals to user.id and user isadmin 
 
+//verifytokenanadmin
 
+only isadmin should be checked 
+
+
+
+             ***************what is params***************
+
+
+ The req.params property is an object containing properties mapped to the named route “parameters”. For example, if you have the route /student/:id, then the “id” property is available as req.params.id. This object defaults to {}.
 
 
 
