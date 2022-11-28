@@ -321,6 +321,35 @@ in this tutorial most important part is take a true token and verify dont forget
 
 
 
+//GET ALL USER////////////////////////////////
+
+fetch all users
+
+get and verfytokenandadmin 
+
+find() methor for mongo db 
+
+
+we can get an limited res in get all user we should add new code for what we want to do
+
+we create const for all new add 
+
+for limited query respond
+
+const query = req.query.new
+
+const users = query 
+? await User.find().sort({_id:-1}).limit(5) 
+: await User.find();
+
+mean :: if there is a query respond 5 limited user if is not its gonna return all user sort({_id:-1}) method for the last 5 user beginnşng with last one and go on 
+
+
+
+
+
+
+
 
 
 
