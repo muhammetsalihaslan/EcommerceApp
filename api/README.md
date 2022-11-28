@@ -278,6 +278,14 @@ we should check password of user and encrypto again because user password may ha
     ).toString();
   }
 
+After tahat ofcourse we codeded async's trycatch 
+
+mongo db findByIdAndUpdate() function is suitable for update part 
+
+send information our user ::  $set: req.body its not gonna return you updated user to prevent that we have to use 
+
+{ new: true }
+
 
 
 
