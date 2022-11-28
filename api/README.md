@@ -286,6 +286,17 @@ send information our user ::  $set: req.body its not gonna return you updated us
 
 { new: true }
 
+when we use token in Headers part of postman we have to use Bearer world in front of token 
+
+Why do we write bearer token?
+Because it's in the relevant standards documents. The general scheme is that you first state the type of token ("Bearer" in this case) and then the token itself. There are other authentication schemes too and they use different type keywords
+
+when we use Bearer we should use split first in verifyToken side
+  
+   code:const token = authHeader.split(" ")[1]; split and use token 
+
+
+
 
 
 
