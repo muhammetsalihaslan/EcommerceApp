@@ -248,9 +248,11 @@ const accessToken = jwt.sign({
            { expiresIn:"365d"}
            );
 
-{ expiresIn:"365d"} it must be "d" timeline  so day 
+{ expiresIn:"365d"} it must be "d" timeline d mean is day and we 
 
- res.status(200).json({...others, accessToken}); :: We used the spread operator because we wanted to get rid of the others.
+ res.status(200).json({...others, accessToken}); :: We used the spread operator because we wanted to get rid of the others in my schema.
+
+we delete update with spesific id and isadmin is important here 
 
 
 ******************************
@@ -264,6 +266,36 @@ const accessToken = jwt.sign({
 
 
                  *********user.js part**********
+
+//update 
+
+we should check password of user and encrypto again because user password may have changed 
+
+ if (req.body.password) {
+    req.body.password = CryptoJS.AES.encrypt(
+      req.body.password,
+      process.env.PASS_SEC
+    ).toString();
+  }
+
+
+
+
+                
+                
+                
+                
+                *********verifyaToken.js********
+
+
+its about authority  user and admin side we can give what will be the level of authority 
+
+const authHeader = req.headers.token; => its a posman side we write token in Headers part to change update delete what ever we want 
+
+next() ::The next function is a function in the Express router which, when invoked, executes the middleware succeeding the current middleware. Middleware functions can perform the following tasks: Execute any code. Make changes to the request and the response objects.
+
+  if(req.user.id === req.params.id || req.user.isAdmin) :: if an id equals to user.id and user isadmin 
+
 
 
 
