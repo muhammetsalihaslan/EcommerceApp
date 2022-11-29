@@ -422,6 +422,20 @@ verify token is important to hoe to use that
 most important part is dont forget any comma and use correct post get put method for the postman 
 
                
+               *************STRIPE PAYMENT**************
+
+
+login -> developer side -> in api keys side we have to key publishable key and secret key -> publishable key is for frontend secret key for server side so secret key is using in .env side
+
+for the stripe we should create .js file in routes
+
+import an express
+  code:const router = require('express').Router();
+import stripe 
+  code:const stripe = require('stripe')(process.env.STRIPE_KEY);
+
+after that we can create our stripe code with post method
+  
 
 
  
