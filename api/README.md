@@ -386,10 +386,31 @@ only isadmin should be checked
               ***************PRODUCT PART*****************
 
 
+use peroduct model and import 
+
+import and use inside of index.js 
+
+its almost same with user part but some verify and post put part may be different
+
+//CREATE///////////////////////////////
+
+only admim can create any product
+
+create const for the new product 
+
+post method in the postman 
+
+//UPDATE///////////////////////////////
+
+Differant between user part is we just about product side
+
+//GET ALL PRODUCT////////////////////
 
 
+We are gonna have two query
 
-
+const qNew = req.query.new  // 
+const qCategory = req.query.category
 
 
  
