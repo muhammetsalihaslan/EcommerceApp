@@ -413,6 +413,17 @@ const qNew = req.query.new  //
 const qCategory = req.query.category
 
 
+                *************CART PART***************
+
+Any user can create own cart
+
+verify token is important to hoe to use that 
+
+most important part is dont forget any comma and use correct post get put method for the postman 
+
+               
+
+
  
 
 
