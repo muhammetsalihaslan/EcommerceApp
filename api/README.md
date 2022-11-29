@@ -345,23 +345,21 @@ const users = query
 mean :: if there is a query respond 5 limited user if is not its gonna return all user sort({_id:-1}) method for the last 5 user beginnşng with last one and go on 
 
 
+//GET USER STATS///////////////////////////
 
 
 
+verifytokenandadmin for stats
 
+**stats is gonna return us total number of user per mounth**
 
+$sum :1 every register here 
 
+we use mongo db aggregate method 
 
+ const lastYear = new Date(date.setFullYear(date.getFullYear() - 1)); last year today
 
-
-
-
-
-                
-                
-                
-                
-                *********verifyaToken.js********
+             *********verifyaToken.js********
 
 
 its about authority  user and admin side we can give what will be the level of authority 
@@ -382,6 +380,12 @@ only isadmin should be checked
 
 
  The req.params property is an object containing properties mapped to the named route “parameters”. For example, if you have the route /student/:id, then the “id” property is available as req.params.id. This object defaults to {}.
+
+
+
+              ***************PRODUCT PART*****************
+
+
 
 
 
