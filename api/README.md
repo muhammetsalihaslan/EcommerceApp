@@ -424,6 +424,9 @@ most important part is dont forget any comma and use correct post get put method
                
                *************STRIPE PAYMENT**************
 
+add stripe for yarn
+   yarn add react-stripe-checkout
+
 
 login -> developer side -> in api keys side we have to key publishable key and secret key -> publishable key is for frontend secret key for server side so secret key is using in .env side
 
@@ -435,6 +438,19 @@ import stripe
   code:const stripe = require('stripe')(process.env.STRIPE_KEY);
 
 after that we can create our stripe code with post method
+
+we cover our code with stripeCheckout which is definition of our app name img etc... its a structure of model
+
+we can send  information to backend with useeffect  and usestate
+
+hold an info with usestate and sent with useeffect 
+
+
+         ************CORS******************
+
+
+What is CORS library used for?
+The CORS mechanism supports secure cross-origin requests and data transfers between browsers and servers. Modern browsers use CORS in APIs such as XMLHttpRequest or Fetch to mitigate the risks of cross-origin HTTP requests
   
 
 
