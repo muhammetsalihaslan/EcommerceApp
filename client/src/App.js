@@ -1,27 +1,37 @@
 import Home from "./pages/Home";
-// import ProductList from "./pages/ProductList";
+import ProductList from "./pages/ProductList";
 
-// import Cart from "./pages/Cart";
+import Cart from "./pages/Cart";
 
-// import Login from "./pages/Login";
+import Login from "./pages/Login";
 
-// import Register from "./pages/Register";
+import Register from "./pages/Register";
 
-// import Product from "./pages/Product";
+import Product from "./pages/Product";
+import {
+  BrowserRouter,
+  Routes,
+  Route,
+ 
+} from "react-router-dom";
 
 
 
 const  App = () =>  {
-  return (
-    <div >
-      {/* <ProductList/> */}
-      {/* <Product/> */}
-      {/* <Register/> */}
-      {/* <Login/> */}
-      {/* <Cart/> */}
-      <Home/>
-    </div>
-  );
+  return(
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Home/>}/>
+        <Route path="/products/:category" element={<ProductList/>}/> 
+        <Route path="/products/:id" element={<ProductList/>}/> 
+        <Route path="/cart" element={<Cart/>}/> 
+        <Route path="/login" element={<Login/>}/> 
+        <Route path="/register" element={<Register/>}/> 
+          
+        
+      </Routes>
+    </BrowserRouter>
+  )
 }
 
 export default App;
