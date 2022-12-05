@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
 import Navbar from "../components/Navbar";
 import Announcement from "../components/Announcement";
@@ -7,6 +7,9 @@ import AddIcon from "@mui/icons-material/Add";
 import RemoveIcon from "@mui/icons-material/Remove";
 import { mobile } from "../responsive";
 import { useSelector } from "react-redux";
+import StripeCheckout from "react-stripe-checkout";
+
+const KEY = process.env.REACT_APP_STRIPE;
 
 const Container = styled.div``;
 
@@ -157,6 +160,13 @@ const Button = styled.button`
 
 const Cart = () => {
   const cart = useSelector((state) => state.cart);
+  const [stripeToken, setStripeToken] = useState(null);
+
+  const onToken = (token) => {
+    setStripeToken(token);
+  };
+
+  console.log(stripeToken);
   return (
     <Container>
       <Navbar />
@@ -226,7 +236,18 @@ const Cart = () => {
               <SummaryItemText>Total</SummaryItemText>
               <SummaryItemPrice>$ {cart.total}</SummaryItemPrice>
             </SummaryItem>
-            <Button>CHECK OUT NOW</Button>
+            <StripeCheckout
+              name="BrandWay"
+              image="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQR3LahtoDQva6jBDaHDxQ5wz1Ixaf1RkINUA&usqp=CAU"
+              billingAddress
+              shippingAddress
+              description={`Your total is $${cart.total}`}
+              amount={cart.total * 100}
+              token={onToken}
+              stripeKey={KEY}
+            >
+              <Button>CHECK OUT NOW</Button>
+            </StripeCheckout>
           </Summary>
         </Bottom>
       </Wrapper>
