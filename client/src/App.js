@@ -12,7 +12,7 @@ import Success from "./pages/Success";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 const App = () => {
-  const user = true;
+  const user = false;
 
   return (
     <BrowserRouter>
