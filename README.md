@@ -51,6 +51,13 @@ const handleFilters = (e) => {
 
 //SORT METHOD::
 
+Firstly we use useState for take an value 
+
+  const [sort, setSort] = useState("newest");
+
+and in the sort html part we gonna set our state directly here;
+
+onChange={(e) => setSort(e.target.value)}
 
 
 
