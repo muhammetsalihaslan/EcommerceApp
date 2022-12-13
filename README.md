@@ -102,6 +102,7 @@ useEffect(() => {
 
 ==!! take each item we are gonna check whether our item include thus filters or not we are choose our filters and look inside each key and value (color, size :: key, yellow and m :: value) if any item includes thus filters we are gonna display them 
 
+db and html kod lowercase or uppercase must be equal for fetch data 
 
 
 
