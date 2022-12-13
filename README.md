@@ -85,6 +85,24 @@ useEffect(() => {
   }, [cat]);
 
 
+  const [filteredProducts, setFilteredProducts] = useState([]); whenever we change our filter we have nev filteredProduct to do that we have create this useState
+
+  cat && setFilteredProducts() // if there is a category set filtered product
+
+  useEffect(() => {
+    cat &&
+      setFilteredProducts(
+        products.filter((item) =>  
+          Object.entries(filters).every(([key, value]) => //all enties every key and value should be checked 
+            item[key].includes(value) // if item key includes value we are gonna filter it 
+          )
+        )
+      );
+  }, [products, cat, filters]);
+
+==!! take each item we are gonna check whether our item include thus filters or not we are choose our filters and look inside each key and value (color, size :: key, yellow and m :: value) if any item includes thus filters we are gonna display them 
+
+
 
 
 
