@@ -26,15 +26,27 @@ useLocation::This hook returns the current location object. This can be useful i
 
 we use useState hook for the value of color and size part and saparated each otjer use name property for spesification and for the every change use an onChange event 
 
-How do we value::
+*********How do we value color and size ::
 
-take and value with const
-   const value = e.target.value;
-and in filter take all value ( if you have 2 value you should use spreed operator to get them together)
-     setFilters({
-      ...filters,
-      [e.target.name]: value,
+we use uselocation to show exactly where we are
+
+  code:  const cat = location.pathname.split("/")[2];
+
+to get value from color and size using useState for the first action;
+
+whenever we changed color  and size to update the state we use onChange event 
+
+how to recognize color and size is selected to prevent this we use name property in color and size html part 
+
+and final part  to show what we select and update value 
+const handleFilters = (e) => {
+    const value = e.target.value;  //
+    setFilters({
+      ...filters,  // filter spread for all our value inside of same curly bracket
+      [e.target.name]: value,  // value is which we created 
     });
+  };
+
 
 
 //SORT METHOD::
