@@ -59,6 +59,33 @@ and in the sort html part we gonna set our state directly here;
 
 onChange={(e) => setSort(e.target.value)}
 
+//products component part maybe most important part::
+
+firstly we get an cat's all product  which is define by useState 
+
+secondly we get another useState for filtered product can categorization 
+
+use UseEFFECT change product list  when every cat is changing and for fetching we use axios for product list with cat ,
+
+axios make with get method for fething
+
+
+useEffect(() => {
+    const getProducts = async () => {
+      try {
+        const res = await axios.get(   // use get method 
+          cat
+            ? `http://localhost:5000/api/products?category=${cat}`   // category=${cat} we have to make for our cat define category in products.js/root/api 
+            : "http://localhost:5000/api/products"      //**if there is a category use first otherwise use second 
+        );
+        setProducts(res.data); // we take the products/cat with setProduct
+      } catch (err) {}
+    };
+    getProducts();  // we have to call our function  here otherwise function is not work
+  }, [cat]);
+
+
+
 
 
 
