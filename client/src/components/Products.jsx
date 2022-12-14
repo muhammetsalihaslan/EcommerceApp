@@ -61,7 +61,7 @@ const Products = ({ cat, filters, sort }) => {
       {cat
         ? filteredProducts.map((item) => <Product item={item} key={item.id} />)
         : products
-            .slice(0, 8)
+            .slice(0, 8) // only max 8 item shows us
             .map((item) => <Product item={item} key={item.id} />)}
     </Container>
   );

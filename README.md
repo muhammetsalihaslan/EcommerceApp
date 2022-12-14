@@ -102,7 +102,30 @@ useEffect(() => {
 
 ==!! take each item we are gonna check whether our item include thus filters or not we are choose our filters and look inside each key and value (color, size :: key, yellow and m :: value) if any item includes thus filters we are gonna display them 
 
-db and html kod lowercase or uppercase must be equal for fetch data 
+db and html kod lowercase or uppercase must be equal in this project 
+
+//MAİN SORT PART::
+
+ useEffect(() => {
+    if (sort === "newest") {
+      setFilteredProducts((prev) =>
+        [...prev].sort((a, b) => a.createdAt - b.createdAt)  // sort nevest to oldest 
+      );
+    } else if (sort === "asc") {
+      setFilteredProducts((prev) =>
+        [...prev].sort((a, b) => a.price - b.price) // sort cheap to expensive
+      );
+    } else {
+      setFilteredProducts((prev) =>
+        [...prev].sort((a, b) => b.price - a.price) // sort expensive to cheap 
+      );
+    }
+  }, [sort]);
+
+
+ {product.color?.map((c) => (
+                <FilterColor color={c} key={c} onClick={() => setColor(c)} />
+              ))}  // if there is color setcolor
 
 
 
